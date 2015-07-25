@@ -19,10 +19,7 @@ public class VocabolarioNormalizer {
                     System.err.println(key);
                     System.exit(1);
                 }
-                if (record.indexOf("(a)=") >= 0) {
-                    key = "a " + key.substring(0, key.length() - 4);
-                }
-                System.out.println(key + "=" + value);
+                // System.out.println(key + "=" + value);
             }
         }.process();
         System.out.println("Done.");

@@ -17,6 +17,15 @@ import java.util.List;
  *
  * http://grammatica-italiana.dossier.net/
  *
+ *
+ * ToDo
+ *
+ * - calculat substantivele masculine terminate în 'a'
+ *
+ * - "calculate" verb forms
+ *
+ * - test numerals (cardinal + ordinal)
+ *
  */
 public class Impiegato {
 

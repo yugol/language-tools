@@ -1,6 +1,7 @@
 abitante,m,
 abitudine,f,
 amica,,
+amore,m,
 aprile,m,
 arte,f,
 artista,m,artisti
@@ -13,9 +14,11 @@ braccio,,braccia
 camicia,,
 canale,m,
 cane,m,
+cantante,m,
 capitale,f,
 carattere,m,
 chiave,f,
+cinema,m,cinema
 classe,f,
 clima,m,climi
 codice,m,
@@ -35,6 +38,7 @@ dicembre,m,
 dito,,dita
 dolce,m,
 dramma,m,drammi
+esame,m,
 esempio,,
 estate,f,
 farmacista,m,farmacisti
@@ -52,9 +56,11 @@ gioco,,
 giornale,m,
 giovane,m,
 girasole,m,
+immagine,f,
 insegnante,f,
 interfaccia,,
 interprete,m,
+ipotesi,f,ipotesi
 istante,m,
 latte,m,
 lente,f,
@@ -89,12 +95,15 @@ parte,f,
 particolare,m,
 penna,,
 pesce,m,
+piacere,m,
 piede,m,
 portiere,m,
+presente,m,
 problema,m,problemi
 professionista,m,professionisti
 programmatore,,
 programmatrice,,
+protagonista,m,
 protagonista,m,protagonisti
 psicologo,,psicologi
 radio,f,
@@ -111,6 +120,7 @@ spazio,,
 spumante,m,
 stivale,m,
 studente,m,
+t.v.,f,t.v.
 transazione,,
 turista,m,
 variabile,f,
