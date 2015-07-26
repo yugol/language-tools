@@ -14,7 +14,7 @@ public class VocabolarioNormalizer {
             protected void processRecord(String record) {
                 String[] parts = record.split("=");
                 String key = parts[0];
-                String value = parts[1];
+                // String value = parts[1];
                 if (!keys.add(key)) {
                     System.err.println(key);
                     System.exit(1);

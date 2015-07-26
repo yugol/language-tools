@@ -56,7 +56,7 @@ public class Nome extends ParteDelDiscorso {
                     if (lemma.endsWith("go")) {
                         return lemma.substring(0, lemma.length() - 2) + "ghi";
                     }
-                    if (lemma.endsWith("o")) {
+                    if (lemma.endsWith("o") || lemma.endsWith("a")) {
                         return lemma.substring(0, lemma.length() - 1) + "i";
                     }
                 case FEMMINILE:
