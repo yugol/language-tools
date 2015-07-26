@@ -172,7 +172,7 @@ public class Preposizione extends ParteDelDiscorso {
     }
 
     @Override
-    public String getForm() {
+    public String getForm(Object... selector) {
         String lemma = getLemma();
 
         if (numero == null) {

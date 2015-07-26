@@ -16,7 +16,7 @@ public class ArticoloIndeterminativo extends Articolo {
     }
 
     @Override
-    public String getForm() {
+    public String getForm(Object... selector) {
         switch (getGenere()) {
             case MASCHILE:
                 switch (getNumero()) {

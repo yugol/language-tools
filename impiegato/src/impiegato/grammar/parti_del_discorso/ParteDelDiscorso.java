@@ -12,6 +12,6 @@ public abstract class ParteDelDiscorso {
         return lemma;
     }
 
-    public abstract String getForm();
+    public abstract String getForm(Object... selector);
 
 }

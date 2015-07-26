@@ -30,8 +30,8 @@ public class NomeItem extends TestItem {
     @Override
     public String getCorrectAnswer() {
         parent.setNumero(numero);
-        String nomeForm = parent.getForm();
-        String articoloForm = arto.getArticolo(parent.getGenere(), numero, nomeForm).getForm();
+        String nomeForm = parent.getForm(null);
+        String articoloForm = arto.getArticolo(parent.getGenere(), numero, nomeForm).getForm(null);
         if (articoloForm.endsWith("'")) {
             return articoloForm + nomeForm;
         }

@@ -65,12 +65,12 @@ public class PronomePersonale extends Pronome {
     }
 
     @Override
-    public String getForm() {
+    public String getForm(Object... selector) {
         return getLemma();
     }
 
     public String getCapitalizedForm() {
-        return StringUtil.capitalizeFirst(getForm());
+        return StringUtil.capitalizeFirst(getForm(null));
     }
 
 }

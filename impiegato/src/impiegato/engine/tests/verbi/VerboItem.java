@@ -39,7 +39,7 @@ public class VerboItem extends TestItem {
         parent.setTempo(tempo);
         parent.setPersona(persona);
         parent.setNumero(numero);
-        return parent.getForm();
+        return parent.getForm(null);
     }
 
     @Override

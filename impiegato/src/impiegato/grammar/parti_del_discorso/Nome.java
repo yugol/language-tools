@@ -126,7 +126,7 @@ public class Nome extends ParteDelDiscorso {
     }
 
     @Override
-    public String getForm() {
+    public String getForm(Object... selector) {
         if (numero == Numero.PLURALE) {
             return plurale;
         }

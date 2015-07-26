@@ -36,13 +36,13 @@ public class VerbiTestData extends TestData {
         }
         verbo.setModo(modo);
         verbo.setTempo(tempo);
-        verbo.setForm(modo, tempo, Persona.PRIMA, Numero.SINGOLARE, forms[1].trim());
-        verbo.setForm(modo, tempo, Persona.PRIMA, Numero.SINGOLARE, forms[1].trim());
-        verbo.setForm(modo, tempo, Persona.SECONDA, Numero.SINGOLARE, forms[2].trim());
-        verbo.setForm(modo, tempo, Persona.TERZA, Numero.SINGOLARE, forms[3].trim());
-        verbo.setForm(modo, tempo, Persona.PRIMA, Numero.PLURALE, forms[4].trim());
-        verbo.setForm(modo, tempo, Persona.SECONDA, Numero.PLURALE, forms[5].trim());
-        verbo.setForm(modo, tempo, Persona.TERZA, Numero.PLURALE, forms[6].trim());
+        verbo.setForm(forms[1].trim(), modo, tempo, Persona.PRIMA, Numero.SINGOLARE);
+        verbo.setForm(forms[1].trim(), modo, tempo, Persona.PRIMA, Numero.SINGOLARE);
+        verbo.setForm(forms[2].trim(), modo, tempo, Persona.SECONDA, Numero.SINGOLARE);
+        verbo.setForm(forms[3].trim(), modo, tempo, Persona.TERZA, Numero.SINGOLARE);
+        verbo.setForm(forms[4].trim(), modo, tempo, Persona.PRIMA, Numero.PLURALE);
+        verbo.setForm(forms[5].trim(), modo, tempo, Persona.SECONDA, Numero.PLURALE);
+        verbo.setForm(forms[6].trim(), modo, tempo, Persona.TERZA, Numero.PLURALE);
 
         for (Persona persona : Persona.values()) {
             for (Numero numero : Numero.values()) {

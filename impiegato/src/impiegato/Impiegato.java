@@ -59,7 +59,9 @@ public class Impiegato {
                 }
             }
         } catch (RuntimeException re) {
-            // re.printStackTrace();
+            if (DEBUG) {
+                re.printStackTrace(System.err);
+            }
         }
         System.out.println("Done " + Impiegato.class.getSimpleName() + ".");
     }
