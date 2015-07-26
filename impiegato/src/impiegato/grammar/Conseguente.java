@@ -1,4 +1,4 @@
-package impiegato.grammar.determinazioni;
+package impiegato.grammar;
 
 import impiegato.util.StringUtil;
 

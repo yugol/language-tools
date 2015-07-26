@@ -1,6 +1,6 @@
 package impiegato.grammar.parti_del_discorso;
 
-import impiegato.grammar.determinazioni.Conseguente;
+import impiegato.grammar.Conseguente;
 import impiegato.grammar.determinazioni.Genere;
 import impiegato.grammar.determinazioni.Numero;
 
