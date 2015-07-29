@@ -4,7 +4,6 @@ import impiegato.engine.TestItem;
 import impiegato.grammar.Arto;
 import impiegato.grammar.determinazioni.Numero;
 import impiegato.grammar.parti_del_discorso.Nome;
-import impiegato.util.StringUtil;
 
 public class NomeItem extends TestItem {
 
@@ -21,17 +20,23 @@ public class NomeItem extends TestItem {
     @Override
     public String getChallenge() {
         StringBuilder challenge = new StringBuilder();
-        challenge.append(StringUtil.capitalizeFirst(arto.toString())).append(" ");
-        challenge.append(numero.toString().toLowerCase()).append(" [");
-        challenge.append(parent.getLemma()).append("]: ");
+        String cardinality = numero == Numero.SINGOLARE ? "1" : "n";
+        if (arto == Arto.INDETERMINATIVO) {
+            challenge.append(cardinality).append(" ");
+        }
+        challenge.append("[").append(parent.getLemma()).append("]");
+        if (arto == Arto.DETERMINATIVO) {
+            challenge.append(" ").append(cardinality);
+        }
+        challenge.append(": ");
         return challenge.toString();
     }
 
     @Override
     public String getCorrectAnswer() {
         parent.setNumero(numero);
-        String nomeForm = parent.getForm(null);
-        String articoloForm = arto.getArticolo(parent.getGenere(), numero, nomeForm).getForm(null);
+        String nomeForm = parent.getForm();
+        String articoloForm = arto.getArticolo(parent.getGenere(), numero, nomeForm).getForm();
         if (articoloForm.endsWith("'")) {
             return articoloForm + nomeForm;
         }
