@@ -9,6 +9,7 @@ public class DuplicateFinder {
     public static void main(String... args) throws IOException {
         String[] resources = new String[]{
             "items/vocabolario.items",
+            "items/espressioni.vocabolario.items",
             "items/nomi.items"
         };
 
