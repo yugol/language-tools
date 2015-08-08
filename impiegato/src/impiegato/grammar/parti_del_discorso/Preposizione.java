@@ -17,7 +17,7 @@ public class Preposizione extends ParteDelDiscorso {
     public static final String ENTRO = "entro";
     public static final String FA = "fa";
 
-    public static final String[] SAMPLES = { DI, A, DA, IN, SU, CON, PER, FRA_TRA };
+    public static final String[] SAMPLES = {DI, A, DA, IN, SU, CON, PER, FRA_TRA};
 
     public static String getRadix(String lemma) {
         if (DI.equals(lemma)) {
@@ -40,86 +40,84 @@ public class Preposizione extends ParteDelDiscorso {
 
     public static Preposizione get(String form) {
         form = form.trim().toLowerCase();
-        if ("d'".equals(form)) {
-            return new Preposizione(DI, null, null, Conseguente.VOCALE);
-        } else if ("fra".equals(form) || "tra".equals(form)) {
-            return new Preposizione(FRA_TRA);
-
-        } else if ("del".equals(form)) {
-            return new Preposizione(DI, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("dello".equals(form)) {
-            return new Preposizione(DI, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
-        } else if ("dell'".equals(form)) {
-            return new Preposizione(DI, null, Numero.SINGOLARE, Conseguente.VOCALE);
-        } else if ("della".equals(form)) {
-            return new Preposizione(DI, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("dei".equals(form)) {
-            return new Preposizione(DI, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
-        } else if ("degli".equals(form)) {
-            return new Preposizione(DI, Genere.MASCHILE, Numero.PLURALE, null);
-        } else if ("delle".equals(form)) {
-            return new Preposizione(DI, Genere.FEMMINILE, Numero.PLURALE, null);
-
-        } else if ("al".equals(form)) {
-            return new Preposizione(A, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("allo".equals(form)) {
-            return new Preposizione(A, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
-        } else if ("all'".equals(form)) {
-            return new Preposizione(A, null, Numero.SINGOLARE, Conseguente.VOCALE);
-        } else if ("alla".equals(form)) {
-            return new Preposizione(A, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("ai".equals(form)) {
-            return new Preposizione(A, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
-        } else if ("agli".equals(form)) {
-            return new Preposizione(A, Genere.MASCHILE, Numero.PLURALE, null);
-        } else if ("alle".equals(form)) {
-            return new Preposizione(A, Genere.FEMMINILE, Numero.PLURALE, null);
-
-        } else if ("dal".equals(form)) {
-            return new Preposizione(DA, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("dallo".equals(form)) {
-            return new Preposizione(DA, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
-        } else if ("dall'".equals(form)) {
-            return new Preposizione(DA, null, Numero.SINGOLARE, Conseguente.VOCALE);
-        } else if ("dalla".equals(form)) {
-            return new Preposizione(DA, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("dai".equals(form)) {
-            return new Preposizione(DA, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
-        } else if ("dagli".equals(form)) {
-            return new Preposizione(DA, Genere.MASCHILE, Numero.PLURALE, null);
-        } else if ("dalle".equals(form)) {
-            return new Preposizione(DA, Genere.FEMMINILE, Numero.PLURALE, null);
-
-        } else if ("nel".equals(form)) {
-            return new Preposizione(IN, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("nello".equals(form)) {
-            return new Preposizione(IN, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
-        } else if ("nell'".equals(form)) {
-            return new Preposizione(IN, null, Numero.SINGOLARE, Conseguente.VOCALE);
-        } else if ("nella".equals(form)) {
-            return new Preposizione(IN, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("nei".equals(form)) {
-            return new Preposizione(IN, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
-        } else if ("negli".equals(form)) {
-            return new Preposizione(IN, Genere.MASCHILE, Numero.PLURALE, null);
-        } else if ("nelle".equals(form)) {
-            return new Preposizione(IN, Genere.FEMMINILE, Numero.PLURALE, null);
-
-        } else if ("sul".equals(form)) {
-            return new Preposizione(SU, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("sullo".equals(form)) {
-            return new Preposizione(SU, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
-        } else if ("sull'".equals(form)) {
-            return new Preposizione(SU, null, Numero.SINGOLARE, Conseguente.VOCALE);
-        } else if ("sulla".equals(form)) {
-            return new Preposizione(SU, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
-        } else if ("sui".equals(form)) {
-            return new Preposizione(SU, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
-        } else if ("sugli".equals(form)) {
-            return new Preposizione(SU, Genere.MASCHILE, Numero.PLURALE, null);
-        } else if ("sulle".equals(form)) {
-            return new Preposizione(SU, Genere.FEMMINILE, Numero.PLURALE, null);
-
+        if (null != form) {
+            switch (form) {
+                case "d'":
+                    return new Preposizione(DI, null, null, Conseguente.VOCALE);
+                case "fra":
+                case "tra":
+                    return new Preposizione(FRA_TRA);
+                case "del":
+                    return new Preposizione(DI, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "dello":
+                    return new Preposizione(DI, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
+                case "dell'":
+                    return new Preposizione(DI, null, Numero.SINGOLARE, Conseguente.VOCALE);
+                case "della":
+                    return new Preposizione(DI, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "dei":
+                    return new Preposizione(DI, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
+                case "degli":
+                    return new Preposizione(DI, Genere.MASCHILE, Numero.PLURALE, null);
+                case "delle":
+                    return new Preposizione(DI, Genere.FEMMINILE, Numero.PLURALE, null);
+                case "al":
+                    return new Preposizione(A, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "allo":
+                    return new Preposizione(A, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
+                case "all'":
+                    return new Preposizione(A, null, Numero.SINGOLARE, Conseguente.VOCALE);
+                case "alla":
+                    return new Preposizione(A, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "ai":
+                    return new Preposizione(A, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
+                case "agli":
+                    return new Preposizione(A, Genere.MASCHILE, Numero.PLURALE, null);
+                case "alle":
+                    return new Preposizione(A, Genere.FEMMINILE, Numero.PLURALE, null);
+                case "dal":
+                    return new Preposizione(DA, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "dallo":
+                    return new Preposizione(DA, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
+                case "dall'":
+                    return new Preposizione(DA, null, Numero.SINGOLARE, Conseguente.VOCALE);
+                case "dalla":
+                    return new Preposizione(DA, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "dai":
+                    return new Preposizione(DA, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
+                case "dagli":
+                    return new Preposizione(DA, Genere.MASCHILE, Numero.PLURALE, null);
+                case "dalle":
+                    return new Preposizione(DA, Genere.FEMMINILE, Numero.PLURALE, null);
+                case "nel":
+                    return new Preposizione(IN, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "nello":
+                    return new Preposizione(IN, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
+                case "nell'":
+                    return new Preposizione(IN, null, Numero.SINGOLARE, Conseguente.VOCALE);
+                case "nella":
+                    return new Preposizione(IN, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "nei":
+                    return new Preposizione(IN, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
+                case "negli":
+                    return new Preposizione(IN, Genere.MASCHILE, Numero.PLURALE, null);
+                case "nelle":
+                    return new Preposizione(IN, Genere.FEMMINILE, Numero.PLURALE, null);
+                case "sul":
+                    return new Preposizione(SU, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "sullo":
+                    return new Preposizione(SU, Genere.MASCHILE, Numero.SINGOLARE, Conseguente.S__Z_X_Y_PS_PN_GN);
+                case "sull'":
+                    return new Preposizione(SU, null, Numero.SINGOLARE, Conseguente.VOCALE);
+                case "sulla":
+                    return new Preposizione(SU, Genere.FEMMINILE, Numero.SINGOLARE, Conseguente.CONSONANTE);
+                case "sui":
+                    return new Preposizione(SU, Genere.MASCHILE, Numero.PLURALE, Conseguente.CONSONANTE);
+                case "sugli":
+                    return new Preposizione(SU, Genere.MASCHILE, Numero.PLURALE, null);
+                case "sulle":
+                    return new Preposizione(SU, Genere.FEMMINILE, Numero.PLURALE, null);
+            }
         }
         return new Preposizione(form);
     }

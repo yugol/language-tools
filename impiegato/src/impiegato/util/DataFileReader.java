@@ -1,7 +1,6 @@
 package impiegato.util;
 
 import impiegato.Impiegato;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -26,9 +25,7 @@ public abstract class DataFileReader {
             if (Impiegato.DEBUG) {
                 System.out.println("Reading: " + dataFile.getCanonicalPath());
             }
-            BufferedReader reader = null;
-            try {
-                reader = new BufferedReader(new FileReader(dataFile));
+            try (BufferedReader reader = new BufferedReader(new FileReader(dataFile))) {
                 String line = null;
                 while (null != (line = reader.readLine())) {
                     if (!StringUtil.isNullOrBlank(line)) {
@@ -38,10 +35,6 @@ public abstract class DataFileReader {
                     }
                 }
                 return true;
-            } finally {
-                if (reader != null) {
-                    reader.close();
-                }
             }
         } else {
             System.err.println("Cannot find: " + dataFile.getCanonicalPath());
