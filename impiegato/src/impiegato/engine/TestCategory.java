@@ -1,8 +1,5 @@
 package impiegato.engine;
 
 public enum TestCategory {
-    VOCABOLARIO,
-    NOMI,
-    VERBI,
-    ESPRESSIONI,
+	NUMERALI, VOCABOLARIO, NOMI, VERBI, ESPRESSIONI,
 }

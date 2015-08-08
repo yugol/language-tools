@@ -1,8 +1,8 @@
 package impiegato.engine.tests.nomi;
 
-import impiegato.engine.TestData;
-import impiegato.engine.TestItem;
 import impiegato.engine.TestSpec;
+import impiegato.engine.tests.TestData;
+import impiegato.engine.tests.TestItem;
 import impiegato.grammar.Arto;
 import impiegato.grammar.determinazioni.Genere;
 import impiegato.grammar.determinazioni.Numero;

@@ -1,8 +1,8 @@
 package impiegato.engine.tests.vocabolario;
 
-import impiegato.engine.TestData;
-import impiegato.engine.TestItem;
 import impiegato.engine.TestSpec;
+import impiegato.engine.tests.TestData;
+import impiegato.engine.tests.TestItem;
 
 import java.util.List;
 
