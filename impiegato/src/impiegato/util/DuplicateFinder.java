@@ -10,9 +10,11 @@ public class DuplicateFinder {
         String[] resources = new String[]{
             "items/nomi.items",
             "items/vocabolario.items",
-            "items/espressioni.vocabolario.items",};
+            "items/espressioni.vocabolario.items",
+            "items/indicativo-presente.verbi.items",
+            "items/indicativo-passato_prossimo.verbi.items",};
 
-        for (String resource : resources) {
+        for (final String resource : resources) {
             System.out.println("Checking: " + resource);
             final Set<String> keys = new HashSet<>();
             new DataFileReader(resource) {
@@ -21,11 +23,14 @@ public class DuplicateFinder {
                 protected void processRecord(String record) {
                     String[] parts = record.split("=");
                     parts = parts[0].split(",");
+                    if (resource.contains("indicativo")) {
+                        parts = parts[0].split(" ");
+                    }
                     String key = parts[0];
                     // String value = parts[1];
                     if (!keys.add(key)) {
                         System.err.println(key);
-                        System.exit(1);
+                        // System.exit(1);
                     }
                     // System.out.println(key + "=" + value);
                 }

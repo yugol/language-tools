@@ -1,19 +1,24 @@
+cantare,canto,canti,canta,cantiamo,cantate,cantano
 collegare
-conoscere
-credere
-dimenticare
-leggere
 mancare
 mangiare
 parlare
-partire
 spiegare
 
-sparire (isc)
+correre,corro,corri,corre,corriamo,correte,corrono
+conoscere
+credere
+leggere
+
+scoprire,scopro,scopri,scopre,scopriamo,scoprite,scoprono
+partire
+
+capire,capisco,capisci,capisce,capiamo,capite,capiscono
 chiarire (isc)
 costruire (isc)
 culire (isc)
 finire (isc)
+fornire (isc)
 garantire (isc)
 guarire (isc)
 inserire (isc)
@@ -21,15 +26,14 @@ preferire (isc)
 pulire (isc)
 reagire (isc)
 riferire (isc)
+sparire (isc)
 spedire (isc)
 tradire (isc)
 unire (isc)
 
-cantare,canto,canti,canta,cantiamo,cantate,cantano
-correre,corro,corri,corre,corriamo,correte,corrono
-scoprire,scopro,scopri,scopre,scopriamo,scoprite,scoprono
-capire,capisco,capisci,capisce,capiamo,capite,capiscono
 cercare,cerco,cerchi,cerca,cerchiamo,cercate,cercano
+dimenticare
+
 pagare,pago,paghi,paga,paghiamo,pagate,pagano
 
 andare,vado,vai,va,andiamo,andate,vanno

@@ -1,56 +1,165 @@
+#participi passati regolari
 
-cambiare
+andare (essere)
+arrivare (essere)
+cambiare (essere)
+cominciare (essere)
+costare (essere)
+diventare (essere)
+durare (essere)
+entrare (essere)
+iniziare (essere)
 parlare
-trovaer
+restare (essere)
+scoppiare (essere)
+sembrare (essere)
+stare (essere)
+tornare (essere)
+trovare
 
-conoscere
+accadere (essere)
+cadere (essere)
 credere
+essere (essere)
+piovere (essere)
 vendere
 
 capire
-finire
-partire
+finire (essere)
+partire (essere)
+riuscire (essere)
+salire (essere)
+sparire (essere)
+uscire (essere)
+
+
+# riflessivi
 
 lavarsi (essere)
 svegliarsi (essere)
 sciogliersi (essere)
 
-andare (essere)
-arrivare (essere)
-cadere (essere)
-entrare (essere)
-giungere (essere)
-partire (essere)
-salire (essere)
-scendere (essere)
-tornare (essere)
-uscire (essere)
-venire (essere)
 
-durare (essere)
-restare (essere)
-rimanere (essere)
-stare (essere)
+dovere (essere)
+potere (essere)
+volere (essere)
 
-cambiare (essere)
-cominciare (essere)
-diventare (essere)
-finire (essere)
-iniziare (essere)
-morire (essere)
-nascere (essere)
+#participi passati irregolari
 
-accadere (essere)
-avvenire (essere)
-costare (essere)
-essere (essere)
+accendere (pp.acceso)
+appendere (pp.appeso)
+aprire (pp.aperto)
+bere (pp.bevuto)
+chiedere (pp.chiesto)
+chiudere (pp.chiuso)
+cogliere (pp.colto)
+concedere (pp.concesso)
+concludere (pp.concluso)
+conoscere (pp.conosciuto)
+convivere (pp.convenuto)
+correggere (pp.corretto)
+correre (essere) (pp.corso)
+crescere (essere) (pp.cresciuto)
+decidere (pp.deciso)
+deludere (pp.deluso)
+difendere (pp.difeso)
+dipendere (essere) (pp.dipeso)
+dirigere (pp.diretto)
+discutere (pp.discusso)
+distinguere (pp.distinto)
+distruggere (pp.distrutto)
+dividere (pp.diviso)
+divivere (pp.divenuto)
+escludere (pp.escluso)
+esistere (essere) (pp.esistito)
+esplodere (essere) (pp.esploso)
+esprimere (pp.espresso)
+essere/stare (essere) (pp.stato)
+insistere (pp.insistito)
+leggere (pp.letto)
+morire (essere) (pp.morto)
+muovere (essere) (pp.mosso)
+nascere (essere) (pp.nato)
+nascondere (pp.nascosto)
+offendere (pp.offeso)
+offrire (pp.offerto)
+perdere (pp.perso)
 piacere (essere) (pp.piaciuto)
-piovere (essere)
-riuscire (essere)
-sembrare (essere)
-succedere (essere)
+piangere (pp.pianto)
+rendere (pp.reso)
+ridere (pp.riso)
+rimanere (essere) (pp.rimasto)
+risolvere (pp.risolto)
+rispondere (pp.risposto)
+rivivere (pp.rivenuto)
+rompere (pp.rotto)
+scegliere (pp.scelto)
+scendere (essere) (pp.sceso)
+sciogliere (pp.sciolto)
+soffrire (pp.sofferto)
+spegnere (pp.spento)
+spendere (pp.speso)
+spingere (pp.spinto)
+succedere (essere) (pp.successo)
+togliere (pp.tolto)
+trarre (pp.tratto)
+trascorrere (pp.trascorso)
+uccidere (pp.ucciso)
+vivere (essere) (pp.venuto)
 
+# groups of verbs
 
-scoppiare (essere) ?
-sparire (essere) ?
+coprire (pp.coperto)
+scoprire (pp.scoperto)
 
+dire (pp.detto)
+contradire (pp.contradetto)
+disdire (pp.disdetto)
+predire (pp.predetto)
+
+durre (pp.dotto)
+tradurre (pp.tradotto)
+ridurre (pp.ridotto)
+produrre (pp.prodotto)
+condurre (pp.condotto)
+
+fare (pp.fatto)
+disfare (pp.disfatto)
+soddisfare (pp.soddisfatto)
+
+giungere (essere) (pp.giunto)
+aggiungere (pp.aggiunto)
+congiungere (pp.congiunto)
+raggiungere (pp.raggiunto)
+
+mettere (pp.messo)
+ammettere (pp.ammeso)
+commettere (pp.commesso)
+permettere (pp.permesso)
+promettere (pp.promesso)
+
+porre (pp.posto)
+comporre (pp.composto)
+deporre (pp.deposto)
+proporre (pp.proposto)
+scomporre (pp.scomposto)
+
+prendere (pp.presto)
+comprendere (pp.compreso)
+sorprendere (pp.sorpreso)
+
+scrivere (pp.scritto)
+descrivere (pp.descritto)
+
+vedere (pp.visto)
+prevedere (pp.previsto)
+rivedere (pp.rivisto)
+
+venire (essere) (pp.venuto)
+avvenire (essere) (pp.avvenuto)
+rivenire (essere) (pp.rivenuto)
+divenire (essere) (pp.divenuto)
+convenire (essere) (pp.convenuto)
+
+vincere (pp.vinto)
+convincere (pp.convinto)
