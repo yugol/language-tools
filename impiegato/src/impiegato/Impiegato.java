@@ -12,15 +12,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- *
- * http://translation.sensagent.com/
- *
- * http://grammatica-italiana.dossier.net/
- *
- * http://hallo.ro/search.do?l=ro&d=it&query=
- *
- */
 public class Impiegato {
 
     public static final boolean DEBUG = false;

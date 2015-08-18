@@ -4,6 +4,19 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ *
+ * http://translation.sensagent.com/composto/it-ro/
+ *
+ * http://hallo.ro/search.do?l=ro&d=it&query=
+ *
+ * https://translate.google.ro/?hl=ro#it/en/cenone
+ *
+ * http://www.treccani.it/vocabolario/tag/cenone/
+ *
+ * http://grammatica-italiana.dossier.net/
+ *
+ */
 public class DuplicateFinder {
 
     public static void main(String... args) throws IOException {
