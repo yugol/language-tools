@@ -1,6 +1,6 @@
 package impiegato.engine.tests.verbi;
 
-import impiegato.engine.tests.TestItem;
+import impiegato.engine.TestItem;
 import impiegato.grammar.determinazioni.Genere;
 import impiegato.grammar.determinazioni.Modo;
 import impiegato.grammar.determinazioni.Numero;

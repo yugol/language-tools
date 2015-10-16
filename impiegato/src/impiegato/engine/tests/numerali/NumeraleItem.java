@@ -1,6 +1,6 @@
 package impiegato.engine.tests.numerali;
 
-import impiegato.engine.tests.TestItem;
+import impiegato.engine.TestItem;
 import impiegato.grammar.parti_del_discorso.Numerale;
 import impiegato.grammar.parti_del_discorso.NumeraleOrdinale;
 

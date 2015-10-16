@@ -1,6 +1,6 @@
 package impiegato.engine.tests.nomi;
 
-import impiegato.engine.tests.TestItem;
+import impiegato.engine.TestItem;
 import impiegato.grammar.Arto;
 import impiegato.grammar.determinazioni.Numero;
 import impiegato.grammar.parti_del_discorso.Nome;

@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
-import impiegato.engine.TestSpec;
+import impiegato.engine.TestItem;
 import impiegato.engine.tests.TestData;
-import impiegato.engine.tests.TestItem;
+import impiegato.engine.tests.TestSpec;
 import impiegato.grammar.parti_del_discorso.Numerale;
 import impiegato.grammar.parti_del_discorso.NumeraleCardinale;
 import impiegato.grammar.parti_del_discorso.NumeraleOrdinale;

@@ -1,4 +1,4 @@
-package impiegato.engine.tests;
+package impiegato.engine;
 
 import java.util.Random;
 

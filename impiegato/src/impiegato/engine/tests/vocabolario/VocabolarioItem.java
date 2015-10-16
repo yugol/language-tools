@@ -1,6 +1,6 @@
 package impiegato.engine.tests.vocabolario;
 
-import impiegato.engine.tests.TestItem;
+import impiegato.engine.TestItem;
 
 public class VocabolarioItem extends TestItem {
 

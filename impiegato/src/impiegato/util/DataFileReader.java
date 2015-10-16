@@ -1,6 +1,6 @@
 package impiegato.util;
 
-import impiegato.Impiegato;
+import impiegato.Impiegato_1;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -22,7 +22,7 @@ public abstract class DataFileReader {
 
     public boolean process() throws IOException {
         if (dataFile.exists()) {
-            if (Impiegato.DEBUG) {
+            if (Impiegato_1.DEBUG) {
                 System.out.println("Reading: " + dataFile.getCanonicalPath());
             }
             try (BufferedReader reader = new BufferedReader(new FileReader(dataFile))) {

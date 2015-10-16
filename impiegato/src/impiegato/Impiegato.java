@@ -1,147 +1,200 @@
 package impiegato;
 
-import impiegato.engine.TestCategory;
-import impiegato.engine.TestSpec;
-import impiegato.engine.tests.TestData;
-import impiegato.engine.tests.TestItem;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Random;
+
+import impiegato.engine.TestItem;
+import impiegato.engine.TestSet;
+import impiegato.engine.TestStore;
+import impiegato.engine.tests.nomi.NomeItem;
+import impiegato.engine.tests.verbi.VerboItem;
+import impiegato.grammar.Arto;
+import impiegato.grammar.determinazioni.Modo;
+import impiegato.grammar.determinazioni.Numero;
+import impiegato.grammar.determinazioni.Persona;
+import impiegato.grammar.determinazioni.Tempo;
+import impiegato.grammar.parti_del_discorso.Nome;
+import impiegato.grammar.parti_del_discorso.Verbo;
+import impiegato.util.ConsoleWrapper;
+import impiegato.util.Constants;
 
 public class Impiegato {
 
-    public static final boolean DEBUG = false;
+    private static boolean DEBUG = true;
 
-    public static final String ITEMS_FOLDER_NAME = "items";
-    public static final String RESULTS_FOLDER_NAME = "results";
+    private static Random         RAND                    = new Random();
+    private static ConsoleWrapper CONSOLE                 = new ConsoleWrapper();
+    private static String         DEFAULT_TEST_SET_ITEM   = "1a";
+    private static int            DEFAULT_TEST_ITEM_COUNT = 10;
 
-    private static final int DEFAULT_TEST_SET_ITEM = 1;
-    private static final int DEFAULT_TEST_ITEM_COUNT = 10;
-
-    public static void main(String... args) throws IOException {
+    public static void main(final String... args) throws IOException {
         Impiegato impiegato = new Impiegato();
-        try {
-            while (true) {
-                impiegato.clearConsole();
-                impiegato.drawMenu();
-                String option = impiegato.readConsole("Please insert test set number (anything else will exit) [" + DEFAULT_TEST_SET_ITEM + "]: ", String.valueOf(DEFAULT_TEST_SET_ITEM));
-                impiegato.initializeTest(Integer.parseInt(option) - 1);
-                while (true) {
-                    int itemCount = DEFAULT_TEST_ITEM_COUNT;
-                    option = impiegato.readConsole("How many items per test (0 to return to main menu)? [" + itemCount + "]: ", String.valueOf(itemCount));
-                    try {
-                        itemCount = Integer.parseInt(option);
-                        if (itemCount > 0) {
-                            impiegato.runTest(itemCount);
-                        } else {
-                            break;
-                        }
-                    } catch (NumberFormatException e) {
-                        break;
-                    }
-                }
-            }
-        } catch (RuntimeException re) {
-            if (DEBUG) {
-                re.printStackTrace(System.err);
-            }
-        }
-        System.out.println("Done " + Impiegato.class.getSimpleName() + ".");
+        impiegato.loadTestStore();
+        impiegato.runTestSession();
+        CONSOLE.println();
+        CONSOLE.println("Bye!");
     }
 
-    private final List<TestSpec> testSets = new ArrayList<>();
-    private final BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));
-    private TestData testData;
+    private final TestStore testStore = new TestStore();
+    private String          setOption;
+    private int             itemCount;
 
-    public Impiegato() throws IOException {
-        testSets.add(new TestSpec(TestCategory.NUMERALI));
-        File itemsFolder = new File(ITEMS_FOLDER_NAME);
+    private void loadTestStore() throws IOException {
+        File itemsFolder = new File(Constants.ITEMS_FOLDER_NAME);
         for (File file : itemsFolder.listFiles()) {
             if (file.isFile()) {
-                String name = file.getName();
-                if (name.endsWith(".items")) {
-                    testSets.add(new TestSpec(file));
-                }
+                testStore.load(file);
             }
-        }
-        Collections.sort(testSets);
-    }
-
-    private void initializeTest(int testSetIndex) throws IOException {
-        TestSpec testSpec = testSets.get(testSetIndex);
-        testData = testSpec.getTestData();
-    }
-
-    private void clearConsole() {
-        for (int i = 0; i < 2; ++i) {
-            System.out.println();
         }
     }
 
     private void drawMenu() {
-        System.out.println("AVAILABLE TESTS: \n");
-        for (int i = 0; i < testSets.size(); ++i) {
-            System.out.format("    %2d. %s\n", i + 1, testSets.get(i));
-        }
-        System.out.println();
+        CONSOLE.println("1. VERBI");
+        CONSOLE.println("  a) ALL");
+        CONSOLE.println("  b) Indicativo presente");
+        CONSOLE.println("  c) Indicativo passato prossimo");
+        CONSOLE.println("2. NOMI");
+        CONSOLE.println("  a) ALL");
     }
 
-    private String readConsole(String cursor, String defaultAnswer) throws IOException {
-        // System.out.println(cursor);
-        // String extra = "";
-        System.out.print(cursor);
-        if (System.console() != null) {
-            int backCount = 0;
-            for (int i = 0; i < cursor.length(); ++i) {
-                if (cursor.charAt(i) > 127) {
-                    ++backCount;
-                    // extra += cursor.charAt(i);
+    private void runTestSession() throws IOException {
+        while (true) {
+            drawMenu();
+            setOption = CONSOLE.readln("Please specify test set ('q' to exit) [" + DEFAULT_TEST_SET_ITEM + "]: ", String.valueOf(DEFAULT_TEST_SET_ITEM)).trim().toLowerCase();
+            if ("q".equals(setOption)) {
+                break;
+            }
+            while (true) {
+                itemCount = DEFAULT_TEST_ITEM_COUNT;
+                String countOption = CONSOLE.readln("How many items in set (0 to return to main menu)? [" + itemCount + "]: ", String.valueOf(itemCount)).trim();
+                try {
+                    itemCount = Integer.parseInt(countOption);
+                    if (0 == itemCount) {
+                        break;
+                    }
+                } catch (NumberFormatException e) {
+                }
+                if (!runTestSet()) {
+                    break;
+                }
+                if (DEBUG) {
+                    break;
                 }
             }
-            backCount >>= 1;
-            for (int i = 0; i < backCount; ++i) {
-                System.out.print("\b");
+            if (DEBUG) {
+                break;
             }
-            for (int i = 0; i < backCount; ++i) {
-                System.out.print(" ");
-            }
-            for (int i = 0; i < backCount; ++i) {
-                System.out.print("\b");
-            }
-            // System.out.print("_" + extra + "_" + backCount);
         }
-        System.out.flush();
-        String answer = cin.readLine();
-        if (defaultAnswer != null && answer.isEmpty()) {
-            answer = defaultAnswer;
-        }
-        return answer;
     }
 
-    private void runTest(int itemCount) throws IOException {
-        clearConsole();
+    private boolean runTestSet() throws IOException {
+        TestSet testSet = generateTestSet();
+        if (testSet == null) {
+            return false;
+        }
+        CONSOLE.clear();
         float correctCount = 0;
         long tStart = System.currentTimeMillis();
         for (int i = 0; i < itemCount; ++i) {
-            TestItem item = testData.sampleItem();
+            TestItem item = testSet.get(i);
             String challenge = String.valueOf(i + 1) + ". " + item.getChallenge();
-            String answer = readConsole(challenge, null);
+            String answer = CONSOLE.readln(challenge, null);
             item.incPresentationCount();
             if (item.getScore(answer) > 0) {
                 item.incCorrectAnswerCount();
                 ++correctCount;
-                System.out.println("ok\n");
+                CONSOLE.println("ok\n");
             } else {
-                System.out.println("ko -> " + item.getCorrectAnswer() + "\n");
+                CONSOLE.println("ko -> " + item.getCorrectAnswer() + "\n");
             }
         }
         long delta = (System.currentTimeMillis() - tStart) / 1000;
-        testData.saveResults();
-        testData.updateRelevances();
-        System.out.format("Score: %4.2f in %d minute(s) and %d second(s)\n\n", 10 * correctCount / itemCount, delta / 60, delta % 60);
+        CONSOLE.format("Score: %4.2f in %d minute(s) and %d second(s)\n\n", 10 * correctCount / itemCount, delta / 60, delta % 60);
+        return true;
+    }
+
+    private TestSet generateTestSet() {
+        TestSet testSet = new TestSet();
+        if (setOption.startsWith("1")) {
+            for (int i = 0; i < itemCount; ++i) {
+                Verbo verbo = getRandomVerbo();
+                Modo modo = getRandomModo();
+                Tempo tempo = getRandomTempo();
+                Persona persona = getRandomPersona();
+                Numero numero = getRandomNumero();
+                VerboItem item = new VerboItem(verbo, modo, tempo, persona, numero);
+                testSet.add(item);
+            }
+        } else if (setOption.startsWith("2")) {
+            for (int i = 0; i < itemCount; ++i) {
+                Nome nome = getRandomNome();
+                Numero numero = getRandomNumero();
+                Arto arto = getRandomArto();
+                NomeItem item = new NomeItem(nome, numero, arto);
+                testSet.add(item);
+            }
+        }
+        if (testSet.size() == 0) {
+            testSet = null;
+        }
+        return testSet;
+    }
+
+    private Nome getRandomNome() {
+        Nome nome = testStore.getRandomNome();
+        return nome;
+    }
+
+    private Verbo getRandomVerbo() {
+        Verbo verbo = testStore.getRandomVerbo();
+        return verbo;
+    }
+
+    private Arto getRandomArto() {
+        Arto value = null;
+        Arto[] values = Arto.values();
+        value = values[RAND.nextInt(values.length)];
+        return value;
+    }
+
+    private Numero getRandomNumero() {
+        Numero value = null;
+        Numero[] values = Numero.values();
+        value = values[RAND.nextInt(values.length)];
+        return value;
+    }
+
+    private Persona getRandomPersona() {
+        Persona value = null;
+        Persona[] values = Persona.values();
+        value = values[RAND.nextInt(values.length)];
+        return value;
+    }
+
+    private Tempo getRandomTempo() {
+        Tempo value = null;
+        if (setOption.endsWith("a")) {
+            Tempo[] values = { Tempo.PRESENTE, Tempo.PASSATO_PROSSIMO };
+            value = values[RAND.nextInt(values.length)];
+        } else if (setOption.endsWith("b")) {
+            value = Tempo.PRESENTE;
+        } else if (setOption.endsWith("c")) {
+            value = Tempo.PASSATO_PROSSIMO;
+        }
+        return value;
+    }
+
+    private Modo getRandomModo() {
+        Modo value = null;
+        if (setOption.endsWith("a")) {
+            Modo[] values = { Modo.INDICATIVO };
+            value = values[RAND.nextInt(values.length)];
+        } else if (setOption.endsWith("b")) {
+            value = Modo.INDICATIVO;
+        } else if (setOption.endsWith("c")) {
+            value = Modo.INDICATIVO;
+        }
+        return value;
     }
 }

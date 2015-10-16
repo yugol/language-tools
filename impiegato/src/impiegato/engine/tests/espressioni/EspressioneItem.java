@@ -1,6 +1,6 @@
 package impiegato.engine.tests.espressioni;
 
-import impiegato.engine.tests.TestItem;
+import impiegato.engine.TestItem;
 import impiegato.util.StringUtil;
 
 public class EspressioneItem extends TestItem {
