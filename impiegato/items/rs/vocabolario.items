@@ -1,39 +1,16 @@
-muzeu=museo
-ochelari=occhiali
-sărbătoare=festa
-a plânge=piangere
-medic=medico
-a sta=stare
-țară=paese
-rezervare=prenotazione
-a trebui=dovere
-seara aceasta=stanotte
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Lună=luna
+a (se) așeza=sedere
 a (se) juca=giocare
+a (se) plimba=camminare
 a ajunge=arrivare
 a alerga=correre
 a avea=avere
+a bea=bere
+a campa=campeggiare
 a chema=chiamare
+a cina=cenare
 a citi=leggere
 a coborâ=scendere
 a conduce=guidare
@@ -49,14 +26,20 @@ a găsi=trovare
 a merge=andare
 a munci=lavorare
 a mânca=mangiare
+a ninge=nevicare
 a pierde=perdere
+a ploua=piovere
+a plânge=piangere
 a plânge=piangere
 a preda=insegnare
 a putea=potere
 a râde=ridere
+a schia=sciare
 a scrie=scrivere
+a sta=stare
 a studia=studiare
 a surâde=sorridere
+a trebui=dovere
 a trăi=vivere
 a urca=salire
 a vedea=vedere
@@ -73,11 +56,16 @@ animal=animale
 antic=antico
 aprilie=aprile
 apă=acqua
+astăzi=oggi
 august=agosto
 așezat=seduto
 bancă (instituție)=banca
+bar=bar
+barcă=barcă
+bicicletă=bicicletta
 biserică=chiesa
 bunic=nonno
+cafea=caffe`
 carne=carne
 cartof=patata
 casă=casa
@@ -91,17 +79,21 @@ cină=cena
 ciorap=calzino
 copac=albero
 copil=bambino
+cort=tendo
 cu=con
 cuțit=coltello
 câine=cane
 când=quando
 cât=quanto
 câteva=alcune
+de dimineață=stamattina
 deal=collina
 decembrie=dicembre
+dedesubt (sub)=sotto
 diferit=diverso
 dove=unde
 dreapta=destra
+după amiază=pomeriggio
 după=dopo
 e-mail=e-mail
 edificiu=edificio
@@ -110,6 +102,7 @@ familie=famiglia
 februarie=febbraio
 femeie=donna
 fericit=felice
+floare=fiore
 fotbal=calcio
 fotografie=foto
 funcționar=impiegato
@@ -118,7 +111,9 @@ fântână=fontana
 grup=gruppo
 hotel=albergo
 ianuarie=gennaio
+iarbă=erba
 instrument=strumento
+insulă=isola
 italiană=italiano
 iulie=luglio
 iunie=giugno
@@ -133,16 +128,21 @@ mare=grande
 martie=marzo
 matematică=matematica
 mașină=macchina
+medic=medico
 mic=piccolo
 minge=palla
 minut=minuto
 modern=moderno
 moschee=moschea
+muzeu=museo
 muzical=musicale
 muzică=musica
 mâine=domani
+mâine=domani
 mână=mano
 noiembrie=novembre
+ocean=oceano
+ochelari=occhiali
 octombrie=ottobre
 ocupat=occupato
 om=uomo
@@ -157,14 +157,20 @@ picant=piccante
 piper=pepe
 pisică=gatto
 plajă=spiaggia
+ploaie=pioggia
 pod=ponte
+pânză=vela
 pădure=bosco
 pălărie=cappello
 părinte=genitore
 rapid=veloce
 restaurant=ristorante
+rezervare=prenotazione
 sare=sale
 scară=scala
+schior=sciatore
+schiu=scio
+seara aceasta=stanotte
 seară=sera
 septembrie=settembre
 sinagogă=sinagoga
@@ -174,6 +180,7 @@ statuie=statua
 supermagazin=supermercato
 sus=su
 săptămână=settimana
+sărbătoare=festa
 tablou=quadro
 templu=tempio
 timp=tempo
@@ -185,11 +192,48 @@ unt=burro
 următor=prossimo
 valiză=valigia
 vechi=vecchio
+vânt=vento
 zahăr=zucchero
 zi=giorno
 zoo=zoo
+zăpadă=neve
 înalt=alto
 înfuriat=arrabbiato
 întrebare=domanda
 școală=scuola
 șervețel=tovagliolo
+țară=paese
+baie=bagno
+costum=costumo
+verde=verde
+sandală=sandale
+alb=bianco
+pantaloni scurți=pantaloncini
+prosop=asciugamano
+a pune=mettere
+a închiria=noleggiare
+a restitui=riportare
+a costa=costare
+a dori=desiderare
+soare=sole
+luni=lunedi`
+marți=martedi`
+miercuri=mercoleddi`
+joi=giovedi`
+vineri=venerdi`
+sâmbătă=sabato
+duminică=domenica
+
+
+
+
+
+
+
+
+
+
+
+
+
+
