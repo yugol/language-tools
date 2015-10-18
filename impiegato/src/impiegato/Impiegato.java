@@ -17,11 +17,12 @@ import impiegato.grammar.determinazioni.Tempo;
 import impiegato.grammar.parti_del_discorso.Nome;
 import impiegato.grammar.parti_del_discorso.Verbo;
 import impiegato.util.ConsoleWrapper;
-import impiegato.util.Constants;
 
 public class Impiegato {
 
-    private static boolean DEBUG = true;
+    private static boolean        DEBUG                   = true;
+
+    private static final String   ITEMS_FOLDER_NAME       = "items/rs";
 
     private static Random         RAND                    = new Random();
     private static ConsoleWrapper CONSOLE                 = new ConsoleWrapper();
@@ -41,7 +42,7 @@ public class Impiegato {
     private int             itemCount;
 
     private void loadTestStore() throws IOException {
-        File itemsFolder = new File(Constants.ITEMS_FOLDER_NAME);
+        File itemsFolder = new File(ITEMS_FOLDER_NAME);
         for (File file : itemsFolder.listFiles()) {
             if (file.isFile()) {
                 testStore.load(file);

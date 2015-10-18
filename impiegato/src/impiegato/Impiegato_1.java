@@ -11,15 +11,16 @@ import impiegato.engine.TestItem;
 import impiegato.engine.tests.TestData;
 import impiegato.engine.tests.TestSpec;
 import impiegato.util.ConsoleWrapper;
-import impiegato.util.Constants;
 
 public class Impiegato_1 {
 
-    public static final boolean        DEBUG   = false;
-    public static final ConsoleWrapper CONSOLE = new ConsoleWrapper();
+    public static final boolean        DEBUG                   = false;
+    public static final ConsoleWrapper CONSOLE                 = new ConsoleWrapper();
 
-    private static final int DEFAULT_TEST_SET_ITEM   = 1;
-    private static final int DEFAULT_TEST_ITEM_COUNT = 10;
+    private static final String        ITEMS_FOLDER_NAME       = "items";
+
+    private static final int           DEFAULT_TEST_SET_ITEM   = 1;
+    private static final int           DEFAULT_TEST_ITEM_COUNT = 10;
 
     public static void main(final String... args) throws IOException {
         final Impiegato_1 impiegato = new Impiegato_1();
@@ -57,7 +58,7 @@ public class Impiegato_1 {
 
     public Impiegato_1() throws IOException {
         testSets.add(new TestSpec(TestCategory.NUMERALI));
-        final File itemsFolder = new File(Constants.ITEMS_FOLDER_NAME);
+        final File itemsFolder = new File(ITEMS_FOLDER_NAME);
         for (final File file : itemsFolder.listFiles()) {
             if (file.isFile()) {
                 final String name = file.getName();
